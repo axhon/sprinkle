@@ -23,3 +23,15 @@ This project depends on Ripgrep being installed on the machine. See [this](https
 To compile this tool, install [Deno](https://deno.land/manual@v1.36.0/getting_started/installation).
 Then, run the command `deno task compile` to build the binary. You will then be able to run the
 executable from your terminal by targeting the `./bin/sprinkle` binary.
+
+# Expected Usage
+
+Lets say we want to find all links in this README, but we only care about the filename, line number and contents of the link, not the url itself.
+
+```bash
+./bin/sprinkle "\[(.*)\]\(.*\)" .
+# outputs
+./README.md:3:Ripgrep
+./README.md:21:this
+./README.md:23:Deno
+```
