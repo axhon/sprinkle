@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "std/": "https://deno.land/std@0.197.0/"
+  },
+  "tasks": {
+    "start": "deno run --allow-run ./mod.ts",
+    "compile": "deno compile --allow-run='rg' --output='./bin/' ./mod.ts"
+  }
+}
